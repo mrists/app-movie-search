@@ -48,6 +48,9 @@ export const createStyle = () => {
           display: flex;
           align-content: center;
           justify-content: center;
+          border: 1px solid black;
+          border-radius: 25px;
+          overflow: hidden;
         }
         .movie__image {
           width: 100%;
@@ -89,7 +92,7 @@ export const createMarkup = () => {
 
   createElement({
     type: 'h1',
-    attrs: {innerText: 'Приложение для поиска фильмов'},
+    attrs: {innerText: 'App-movie-search'},
     container
   });
 
@@ -104,7 +107,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__label-input',
       for: 'search',
-      innerText: 'Поиск фильмов'
+      innerText: 'Movie search'
     },
     container: searchBox
   });
@@ -114,7 +117,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__input',
       type: 'text',
-      placeholder: 'Начните вводить текст',
+      placeholder: 'Enter movie title',
       id: 'search'
     },
     container: searchBox
@@ -137,7 +140,7 @@ export const createMarkup = () => {
     attrs: {
       class: 'search__label-checkbox',
       for: 'checkbox',
-      innerText: 'Добавлять фильмы к существующему списку'
+      innerText: 'Add movies to an existing list'
     },
     container: searchBox
   });
