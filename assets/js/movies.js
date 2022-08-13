@@ -24,7 +24,7 @@ const debounce = (() => {
 const getData = (url) => fetch(url)
   .then((res) => res.json())
   .then((json) => {
-    if (!json || !json.Search) throw Error('Сервер вернул неправильный объект');
+    if (!json || !json.Search) throw Error('The server returned the wrong object');
 
     return json.Search;
   });
